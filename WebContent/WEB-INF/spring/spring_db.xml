@@ -1,0 +1,97 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-2.5.xsd
+		http://www.springframework.org/schema/orm
+		http://www.springframework.org/schema/orm/spring-orm-2.5.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
+		> 
+
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    	<property name="order" value="1"></property>
+        <property name="location" value="/WEB-INF/config/db.properties"/>
+    </bean>
+
+	
+	<bean id="mysqlDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+       <property name="url">
+          <value>${database.url}</value>
+     </property>
+     <property name="driverClassName">
+	        <value>${database.driver}</value>
+      </property>
+      <property name="username">
+           <value>${database.user}</value>
+      </property>
+       <property name="password">
+          <value>${database.password}</value>
+   	 </property>
+   </bean>
+   
+   <bean id="sqlMap" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="configLocation" value="classpath:com/web/server/ibatis/config/SqlMapConfig.xml"/>
+        <property name="dataSource" ref="mysqlDataSource" />
+   </bean>   
+    
+   
+ <bean id="ConsommablematerielDAOImpl" class="com.web.server.ibatis.daoImpl.ConsommablematerielDAOImpl">
+   		<property name="sqlMapClient" ref="sqlMap"/>
+   </bean>
+   <bean id="DemandeDAOImpl" class="com.web.server.ibatis.daoImpl.DemandeDAOImpl">
+   		<property name="sqlMapClient" ref="sqlMap"/>
+   </bean>
+    <bean id="DeplacementhibergmentDAOImpl" class="com.web.server.ibatis.daoImpl.DeplacementhibergmentDAOImpl">
+   		<property name="sqlMapClient" ref="sqlMap"/>
+   </bean>
+   
+     <bean id="DocumentationDAOImpl" class="com.web.server.ibatis.daoImpl.DocumentationDAOImpl">
+   		<property name="sqlMapClient" ref="sqlMap"/>
+   </bean>
+
+    
+    <bean id="EquipementDAOImpl" class="com.web.server.ibatis.daoImpl.EquipementDAOImpl">
+   		<property name="sqlMapClient" ref="sqlMap"/>
+   </bean>
+   
+    <bean id="EtudiantDAOImpl" class="com.web.server.ibatis.daoImpl.EtudiantDAOImpl">
+   		<property name="sqlMapClient" ref="sqlMap"/>
+   </bean>
+    <bean id="MaintenancediveresDAOImpl" class="com.web.server.ibatis.daoImpl.MaintenancediveresDAOImpl">
+   		<property name="sqlMapClient" ref="sqlMap"/>
+   </bean>
+   <bean id="ManifestationsientifiqueDAOImpl"
+		class="com.web.server.ibatis.daoImpl.ManifestationsientifiqueDAOImpl">
+		<property name="sqlMapClient" ref="sqlMap" />
+	</bean>
+	<bean id="MissionsDAOImpl"
+		class="com.web.server.ibatis.daoImpl.MissionsDAOImpl">
+		<property name="sqlMapClient" ref="sqlMap" />
+	</bean>
+	<bean id="RenumerationDAOImpl"
+		class="com.web.server.ibatis.daoImpl.RenumerationDAOImpl">
+		<property name="sqlMapClient" ref="sqlMap" />
+	</bean>
+	
+	
+		<bean id="SoustraitanceDAOImpl"
+		class="com.web.server.ibatis.daoImpl.SoustraitanceDAOImpl">
+		<property name="sqlMapClient" ref="sqlMap" />
+	</bean>
+	
+	
+		<bean id="StageDAOImpl"
+		class="com.web.server.ibatis.daoImpl.StageDAOImpl">
+		<property name="sqlMapClient" ref="sqlMap" />
+	</bean>
+	
+	
+	
+		<bean id="AdministrateurDAOImpl"
+		class="com.web.server.ibatis.daoImpl.AdministrateurDAOImpl">
+		<property name="sqlMapClient" ref="sqlMap" />
+	</bean>
+</beans>

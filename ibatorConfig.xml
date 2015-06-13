@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration >
+  <classPathEntry location="D:\LamiaWorkSpace\enit\WebContent\WEB-INF\lib\mysql-connector-java-5.1.22-bin.jar"/>
+  <ibatorContext id="ibatorContext" defaultModelType="flat" targetRuntime="Ibatis2java5">
+   	
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/rubrique" userId="root" password="" />
+    <javaModelGenerator targetPackage="com.web.server.ibatis.model" targetProject="enit" />
+    <sqlMapGenerator targetPackage="com.web.server.ibatis.sqlmap" targetProject="enit" />
+    <daoGenerator implementationPackage="com.web.server.ibatis.daoImpl" targetPackage="com.web.server.ibatis.dao" targetProject="enit" type="SPRING" />
+ 
+<!-- 
+  <table schema="consommablemateriel" tableName="consommablemateriel"  
+    	enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+    	enableUpdateByExample="false" selectByExampleQueryId="false">
+    	<property name="useActualColumnNames" value="true"/>
+    	 </table> 
+   	 
+      <table schema="demande" tableName="demande"  
+    	enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+    	enableUpdateByExample="false" selectByExampleQueryId="false">
+    	<property name="useActualColumnNames" value="true"/>
+    	 </table>
+    	 	
+ <table schema="deplacementhibergment" tableName="deplacementhibergment"  
+    	enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+    	enableUpdateByExample="false" selectByExampleQueryId="false">
+    	<property name="useActualColumnNames" value="true"/>
+    	 </table>
+    
+    	 
+    	   <table schema="documentation" tableName="documentation"  
+    	enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+    	enableUpdateByExample="false" selectByExampleQueryId="false">
+    	<property name="useActualColumnNames" value="true"/>
+    	 </table>
+    	  <table schema="equipement" tableName="equipement"  
+    	enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+    	enableUpdateByExample="false" selectByExampleQueryId="false">
+    	<property name="useActualColumnNames" value="true"/>
+    	 </table>
+    	   <table schema="etudiant" tableName="etudiant"  
+    	enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+    	enableUpdateByExample="false" selectByExampleQueryId="false">
+    	<property name="useActualColumnNames" value="true"/>
+    	 </table>
+    	   <table schema="maintenancediveres" tableName="maintenancediveres"  
+    	enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+    	enableUpdateByExample="false" selectByExampleQueryId="false">
+    	<property name="useActualColumnNames" value="true"/>
+    	 </table> 
+    	  <table schema="manifestationsientifique" tableName="manifestationsientifique"  
+    	enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+    	enableUpdateByExample="false" selectByExampleQueryId="false">
+    	<property name="useActualColumnNames" value="true"/>
+    	 </table> 
+    	 	  <table schema="missions" tableName="missions"  
+    	enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+    	enableUpdateByExample="false" selectByExampleQueryId="false">
+    	<property name="useActualColumnNames" value="true"/>
+    	 </table>
+    	 
+    	 <table schema="renumeration" tableName="renumeration"  
+    	enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+    	enableUpdateByExample="false" selectByExampleQueryId="false">
+    	<property name="useActualColumnNames" value="true"/>
+    	 </table>
+    	 <table schema="soustraitance" tableName="soustraitance"  
+    	enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+    	enableUpdateByExample="false" selectByExampleQueryId="false">
+    	<property name="useActualColumnNames" value="true"/>
+    	 </table>
+    	  <table schema="stage" tableName="stage"  
+    	enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+    	enableUpdateByExample="false" selectByExampleQueryId="false">
+    	<property name="useActualColumnNames" value="true"/>
+    	 </table>
+    	
+    	 
+    	  -->
+    	 
+    	  <table schema="demande" tableName="demande"  
+    	enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" 
+    	enableUpdateByExample="false" selectByExampleQueryId="false">
+    	<property name="useActualColumnNames" value="true"/>
+    	 </table>
+    	 
+    	 
+    
+   </ibatorContext>
+</ibatorConfiguration>

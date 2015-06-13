@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/spring/spring_db.xml</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>javax.faces.PROJECT_STAGE</param-name>
+    <param-value>Development</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>/faces/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.xhtml</url-pattern>
+  </servlet-mapping>
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+  <welcome-file-list>
+    <welcome-file>faces/dialogLogin.xhtml</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>facelets.SKIP_COMMENTS</param-name>
+    <param-value>true</param-value>
+  </context-param>
+  
+  <servlet>
+    <servlet-name>LoginAdmin</servlet-name>
+    <servlet-class>com.controller.servlets.LoginAdmin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginAdmin</servlet-name>
+    <url-pattern>/LoginAdmin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LoginEtudiant</servlet-name>
+    <servlet-class>com.controller.servlets.LoginEtudiant</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginEtudiant</servlet-name>
+    <url-pattern>/LoginEtudiant</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+    <servlet>
+    <servlet-name>PDFServlet</servlet-name>
+    <servlet-class>com.email.web.PDFServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PDFServlet</servlet-name>
+    <url-pattern>/PDFServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>PDFServletcertif</servlet-name>
+    <servlet-class>com.email.web.PDFServletcertif</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PDFServletcertif</servlet-name>
+    <url-pattern>/PDFServletcertif</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>PDFServlethosp</servlet-name>
+    <servlet-class>com.email.web.PDFServlethosp</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PDFServlethosp</servlet-name>
+    <url-pattern>/PDFServlethosp</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  <servlet>
+    <servlet-name>Annulerrendevousecritaire</servlet-name>
+    <servlet-class>com.email.web.Annulerrendevousecritaire</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Annulerrendevousecritaire</servlet-name>
+    <url-pattern>/Annulerrendevousecritaire</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+   <servlet>
+    <servlet-name>Annulerrendevousmedecin</servlet-name>
+    <servlet-class>com.email.web.Annulerrendevousmedecin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Annulerrendevousmedecin</servlet-name>
+    <url-pattern>/Annulerrendevousmedecin</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+    <servlet-name>emailPerduMedecin</servlet-name>
+    <servlet-class>com.email.web.emailPerduMedecin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>emailPerduMedecin</servlet-name>
+    <url-pattern>/emailPerduMedecin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ecrireDemande</servlet-name>
+    <servlet-class>com.email.web.ecrireDemande</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ecrireDemande</servlet-name>
+    <url-pattern>/ecrireDemande</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ecrireOrdonnance</servlet-name>
+    <servlet-class>com.email.web.ecrireOrdonnance</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ecrireOrdonnance</servlet-name>
+    <url-pattern>/ecrireOrdonnance</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ecrirerapportHospitalisation</servlet-name>
+    <servlet-class>com.email.web.ecrirerapportHospitalisation</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ecrirerapportHospitalisation</servlet-name>
+    <url-pattern>/ecrirerapportHospitalisation</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>emailPerduPatient</servlet-name>
+    <servlet-class>com.email.web.emailPerduPatient</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>emailPerduPatient</servlet-name>
+    <url-pattern>/emailPerduPatient</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>updateAdministrateur</servlet-name>
+    <servlet-class>com.email.web.updateAdministrateur</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateAdministrateur</servlet-name>
+    <url-pattern>/updateAdministrateur</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>emailPerduSecritaire</servlet-name>
+    <servlet-class>com.email.web.emailPerduSecritaire</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>emailPerduSecritaire</servlet-name>
+    <url-pattern>/emailPerduSecritaire</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>InscriptionMedecin</servlet-name>
+    <servlet-class>com.email.web.InscriptionMedecin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InscriptionMedecin</servlet-name>
+    <url-pattern>/InscriptionMedecin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>updatePatient</servlet-name>
+    <servlet-class>com.email.web.updatePatient</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updatePatient</servlet-name>
+    <url-pattern>/updatePatient</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AccepterDemande</servlet-name>
+    <servlet-class>com.email.web.AccepterDemande</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AccepterDemande</servlet-name>
+    <url-pattern>/AccepterDemande</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>valide</servlet-name>
+    <servlet-class>com.email.web.valide</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>valide</servlet-name>
+    <url-pattern>/valide</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>validee</servlet-name>
+    <servlet-class>com.email.web.validee</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>validee</servlet-name>
+    <url-pattern>/validee</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>InscriptionPatient</servlet-name>
+    <servlet-class>com.email.web.InscriptionPatient</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InscriptionPatient</servlet-name>
+    <url-pattern>/InscriptionPatient</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ajouterIndisponibilite</servlet-name>
+    <servlet-class>com.email.web.ajouterIndisponibilite</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ajouterIndisponibilite</servlet-name>
+    <url-pattern>/ajouterIndisponibilite</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>rendevou</servlet-name>
+    <servlet-class>com.email.web.rendevou</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>rendevou</servlet-name>
+    <url-pattern>/rendevou</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>InitContextServlet</servlet-name>
+    <servlet-class>com.email.web.InitContextServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitContextServlet</servlet-name>
+    <url-pattern>/InitContextServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>test</servlet-name>
+    <servlet-class>com.controller.servlets.test</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>test</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+
+<settings useStatementNamespaces="true" useColumnLabel="true" />
+<sqlMap resource="com/web/server/ibatis/sqlmap/consommablemateriel_SqlMap.xml" />	
+<sqlMap resource="com/web/server/ibatis/sqlmap/demande_SqlMap.xml" />
+<sqlMap resource="com/web/server/ibatis/sqlmap/deplacementhibergment_SqlMap.xml" />
+<sqlMap resource="com/web/server/ibatis/sqlmap/documentation_SqlMap.xml" />
+<sqlMap resource="com/web/server/ibatis/sqlmap/equipement_SqlMap.xml" />
+<sqlMap resource="com/web/server/ibatis/sqlmap/etudiant_SqlMap.xml" />
+<sqlMap resource="com/web/server/ibatis/sqlmap/maintenancediveres_SqlMap.xml" />
+<sqlMap resource="com/web/server/ibatis/sqlmap/manifestationsientifique_SqlMap.xml" />
+<sqlMap resource="com/web/server/ibatis/sqlmap/missions_SqlMap.xml" />
+
+
+<sqlMap resource="com/web/server/ibatis/sqlmap/renumeration_SqlMap.xml" />
+<sqlMap resource="com/web/server/ibatis/sqlmap/soustraitance_SqlMap.xml" />
+<sqlMap resource="com/web/server/ibatis/sqlmap/stage_SqlMap.xml" />
+<sqlMap resource="com/web/server/ibatis/sqlmap/administrateur_SqlMap.xml" />
+
+
+</sqlMapConfig>
